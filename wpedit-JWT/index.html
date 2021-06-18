@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WP Edit</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Source+Sans+Pro:400,400i,700i,900" rel="stylesheet">
+    <link rel="stylesheet" href="style-main.css" type="text/css" media="all">
+
+    <script src="JS/loadpost.js" defer></script>
+
+    <script src="JS/jwt.js" defer></script>
+
+</head>
+
+<body>
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+    <header class="masthead">
+        <div class="site-header">
+            <div class="site-branding">
+                <p class="site-title">WP Edit</p>
+            </div><!-- .site-title -->
+			<form name="loginform" id="loginform" style="display: none">
+				<label for="user_login">Username:</label>
+				<input type="text" id="user_login" name="username" class="input" value="" size="20">
+				<label for="user_pass">Password:</label>
+				<input type="password" id="user_pass" name="pass" class="input" value="" size="20">
+				<input type="submit" id="login_button" value="Log In">
+			</form>
+            <button id="logout" style="display: none">Log out</button>
+            <div class="error"></div>
+        </div><!-- .centered -->
+
+    </header><!-- .masthead -->
+
+    <section class="content">
+        <main class="main-area">
+
+            <div class="post centered">
+                <h1 class="post-title skeleton">Post title</h1>
+                <button class="edit-toggle" type="button">Edit title</button>
+                <form name="titleform" id="titleform" style="display: none">
+                    <label for="title-input">Title:</label>
+                    <input type="text" id="title-input" name="title-input" class="input" value="" size="60">
+                    <input type="submit" id="edit-button" value="Save title">
+                </form>
+                <div class="post-meta skeleton">
+                    by <span class="post-author">Author name</span>. Published <span class="post-date">Publishing date</span>. <span class="post-link">Original link</span>
+                </div>
+                <div class="post-content skeleton">
+                    <p>Post content</p>
+                </div><!-- .post-content -->
+            </div><!-- .post centered -->
+
+        </main><!-- .main-area -->
+
+        <nav class="navigation-list">
+            <div class="nav-loader">
+                <img src="JS/spinner.svg" class="list-loader" />
+            </div>
+            <ul></ul>
+        </nav><!-- .navigation-list -->
+    </section><!-- .content -->
+
+    <footer class="footer">
+        <section class="footer-widgets centered">
+            <div class="footer-title">WP Editor</div>
+            <p>A simple post editor using the WordPress REST API</p>
+        </section><!-- .footer-widgets -->
+
+    </footer><!-- .footer -->
+
+
+
+
+</body>
+
+</html>

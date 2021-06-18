@@ -1,0 +1,49 @@
+/*
+Theme Name: TT Child
+Text Domain: ttchild
+Version: 1.0
+Description: Child theme with RESTful features, based on Twenty Twenty.
+Author: Morten Rand-Hendriksen
+Template: twentytwenty
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+/* Override parent styles. */
+
+.singular:not(.overlay-header) .entry-header a {
+    color: inherit!important;
+}
+
+.load-previous .pagination-single-inner {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.load-previous .nav-links > * {
+    margin: 0;
+}
+
+/* JS spinner for slow connections */
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+}
+
+.js-loader {
+    display: none;
+    margin-top: 1em;
+    text-align: center;
+    padding: .7em;
+}
+
+.js-loader img {
+    animation: spinner .6s linear infinite;
+}
